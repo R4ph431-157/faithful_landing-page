@@ -25,26 +25,6 @@ export default function Footer() {
             <p className="text-xs text-text-muted">
               &copy; {new Date().getFullYear()} Founder's Pen. All rights reserved.
             </p>
-            <div className="flex items-center gap-6">
-              <button
-                onClick={() => scrollTo("pricing")}
-                className="text-xs text-text-muted hover:text-text-secondary transition-colors cursor-pointer"
-              >
-                pricing
-              </button>
-              <button
-                onClick={() => scrollTo("faq")}
-                className="text-xs text-text-muted hover:text-text-secondary transition-colors cursor-pointer"
-              >
-                FAQ
-              </button>
-              <button
-                onClick={() => scrollTo("contact")}
-                className="text-xs text-text-muted hover:text-text-secondary transition-colors cursor-pointer"
-              >
-                contact
-              </button>
-            </div>
           </div>
         </div>
       </footer>
