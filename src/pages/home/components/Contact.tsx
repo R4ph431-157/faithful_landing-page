@@ -18,10 +18,10 @@ export default function Contact() {
             Get Started
           </p>
           <h2 className="animate-in opacity-0 translate-y-8 transition-all duration-700 ease-out delay-100 font-serif text-3xl md:text-4xl lg:text-[3.25rem] font-semibold text-text leading-tight">
-            ready to stay consistent?
+            I appreciate your interest in Founder's Pen.
           </h2>
           <p className="animate-in opacity-0 translate-y-8 transition-all duration-700 ease-out delay-200 mt-5 text-lg md:text-xl lg:text-2xl text-text-secondary">
-            let&apos;s build your content system
+            Fill out this form, and I'll get back to you as soon as possible.
           </p>
 
           <div className="animate-in opacity-0 translate-y-8 transition-all duration-700 ease-out delay-300 mt-12 md:mt-14 text-center">

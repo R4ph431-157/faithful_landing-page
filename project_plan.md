@@ -12,7 +12,6 @@ Founder's Pen is a personal ghostwriting service for builders and creators who w
 - [ ] Pricing section with Base and Premium plans
 - [ ] System Note & Payment Terms section
 - [ ] FAQ accordion with 8 questions
-- [ ] Contact/CTA section with booking form
 - [ ] Responsive design for all screen sizes
 - [ ] Smooth scroll navigation
 
@@ -20,21 +19,10 @@ Founder's Pen is a personal ghostwriting service for builders and creators who w
 No database required for this project. All content is static.
 
 ## 5. Backend / Third-party Integration Plan
-- Supabase: Not needed for this phase
-- Shopify: Not needed
-- Stripe: Not needed (payments handled via USDT off-platform)
-- Contact form: Using Readdy form submission for booking inquiries
+- Contact form: Using typeform submission for booking inquiries
 
 ## 6. Development Phase Plan
 
 ### Phase 1: Landing Page Design & Build ✅ COMPLETE
 - Goal: Build the complete single-page landing website with all sections
-- Deliverable: Fully functional, responsive landing page with Hero, About, Pricing, System Note, FAQ, and Contact sections
-
-### Phase 2: Polish & Cleanup ✅ COMPLETE
-- Removed unused i18n infrastructure (not needed for single-language site)
-- Removed unused dependencies (firebase, supabase, stripe, recharts, lucide-react, i18next packages)
-- Removed unused Tailwind color token (`surface-hover`)
-- Removed unused imports (`useRef` in FAQ component)
-- Cleaned up ESLint auto-import globals
-- Build passes cleanly
+- Deliverable: Fully functional, responsive landing page with Hero, About, Pricing, System Note, FAQsections
