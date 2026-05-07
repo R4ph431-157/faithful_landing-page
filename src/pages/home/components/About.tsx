@@ -62,10 +62,7 @@ export default function About() {
               </span>
               <div>
                 <p className="font-serif text-xl md:text-2xl italic text-text">
-                  — faithful
-                </p>
-                <p className="text-sm text-text-muted mt-1">
-                  owner, founder&apos;s pen
+                  faithful
                 </p>
               </div>
             </div>
