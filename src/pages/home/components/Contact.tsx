@@ -15,11 +15,9 @@ export default function Contact() {
       <div className="relative z-10 w-full px-6 md:px-10 lg:px-20 xl:px-24">
         <div className="max-w-3xl mx-auto text-center">
           <p className="animate-in opacity-0 translate-y-8 transition-all duration-700 ease-out font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-heading mb-6">
-            Get Started
-          </p>
-          <h2 className="animate-in opacity-0 translate-y-8 transition-all duration-700 ease-out delay-100 font-serif text-3xl md:text-4xl lg:text-[3.25rem] font-semibold text-text leading-tight">
             I appreciate your interest in Founder's Pen.
-          </h2>
+          </p>
+          
           <p className="animate-in opacity-0 translate-y-8 transition-all duration-700 ease-out delay-200 mt-5 text-lg md:text-xl lg:text-2xl text-text-secondary">
             Fill out this form, and I'll get back to you as soon as possible.
           </p>
