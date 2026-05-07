@@ -78,7 +78,7 @@ export default function Hero() {
 
           <div className="animate-in opacity-0 translate-y-8 transition-all duration-700 ease-out delay-700 mt-10 md:mt-12 flex items-center gap-4">
             <a
-              href="https://typeform.com"
+              href="https://tally.so/r/68rbvA"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-text text-bg px-9 py-3.5 rounded-full text-[0.95rem] lg:text-base font-medium hover:bg-accent hover:text-bg transition-all duration-300 cursor-pointer whitespace-nowrap tracking-wide flex items-center gap-2"
