@@ -24,7 +24,7 @@ export default function Contact() {
 
           <div className="animate-in opacity-0 translate-y-8 transition-all duration-700 ease-out delay-300 mt-12 md:mt-14 text-center">
             <a
-              href="https://typeform.com"
+              href="https://tally.so/r/68rbvA"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-text text-bg px-10 py-4 rounded-full text-base font-medium hover:bg-accent hover:text-bg transition-all duration-300 cursor-pointer whitespace-nowrap tracking-wide"

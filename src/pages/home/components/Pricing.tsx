@@ -65,7 +65,7 @@ export default function Pricing() {
             </ul>
 
             <a
-              href="https://typeform.com"
+              href="https://tally.so/r/68rbvA"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-10 w-full bg-surface-light border border-border text-text py-3.5 rounded-full text-base font-medium hover:bg-text hover:text-bg hover:border-text transition-all duration-300 cursor-pointer whitespace-nowrap flex items-center justify-center gap-2"
@@ -103,7 +103,7 @@ export default function Pricing() {
             </ul>
 
             <a
-              href="https://typeform.com"
+              href="https://tally.so/r/68rbvA"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-10 w-full bg-accent text-bg py-3.5 rounded-full text-base font-medium hover:bg-text hover:text-bg transition-all duration-300 cursor-pointer whitespace-nowrap flex items-center justify-center gap-2"
