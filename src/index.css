@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: "IBM Plex Mono", monospace;
   background-color: #0A0A0A;
   color: #F5F2ED;
   -webkit-font-smoothing: antialiased;
