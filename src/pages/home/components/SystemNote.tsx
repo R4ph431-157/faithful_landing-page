@@ -3,34 +3,34 @@ import { useRef, useEffect, useState } from "react";
 const timelineItems = [
   {
     id: "01",
-    label: "system note",
+    label: "System Note",
     icon: "ri-user-smile-line",
     type: "text" as const,
     content:
-      "founder's pen is a one-person ghostwriting system, so you'll work directly with me, faithful, founder of founder's pen.",
+      "Founders Pen is a one-person ghostwriting system, so you'll work directly with me, Faithful, founder of Founders Pen.",
   },
   {
     id: "02",
-    label: "payment terms",
+    label: "Payment Terms",
     icon: "ri-bank-card-line",
     type: "list" as const,
     items: [
-      { icon: "ri-currency-line", text: "monthly upfront (usdt only)" },
-      { icon: "ri-calendar-2-line", text: "each subscription runs for 30 days from payment date" },
-      { icon: "ri-repeat-2-line", text: "example: pay jan 3 → renews feb 3" },
-      { icon: "ri-play-circle-line", text: "work begins after payment is received" },
+      { icon: "ri-currency-line", text: "Monthly upfront (USDT only)" },
+      { icon: "ri-calendar-2-line", text: "Each subscription runs for 30 days from payment date" },
+      { icon: "ri-repeat-2-line", text: "Example: Pay Jan 3 → renews Feb 3" },
+      { icon: "ri-play-circle-line", text: "Work begins after payment is received" },
     ],
   },
   {
     id: "03",
-    label: "revision policy",
+    label: "Revision Policy",
     icon: "ri-edit-box-line",
     type: "list" as const,
     items: [
-      { icon: "ri-loop-left-line", text: "up to 2 revision rounds per monthly delivery" },
-      { icon: "ri-voiceprint-line", text: "revisions are included to ensure alignment with your voice" },
-      { icon: "ri-time-line", text: "feedback should be shared within 48 - 72 hours after delivery" },
-      { icon: "ri-error-warning-line", text: "additional revisions outside scope may be charged or moved to the next cycle" },
+      { icon: "ri-loop-left-line", text: "Up to 2 revision rounds per monthly delivery" },
+      { icon: "ri-voiceprint-line", text: "Revisions are included to ensure alignment with your voice" },
+      { icon: "ri-time-line", text: "Feedback should be shared within 48 - 72 hours after delivery" },
+      { icon: "ri-error-warning-line", text: "Additional revisions outside scope may be charged or moved to the next cycle" },
     ],
   },
 ];
@@ -81,22 +81,11 @@ export default function SystemNote() {
       <div className="relative z-10 w-full px-6 md:px-10 lg:px-20 xl:px-24">
         <div className="max-w-4xl mx-auto">
           {/* Section header */}
-          <div className="mb-14 md:mb-20">
-            <p className="animate-in opacity-0 translate-y-8 transition-all duration-700 ease-out font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-heading">
-              Terms &amp; System
-            </p>
-          </div>
+          
 
           {/* Timeline */}
           <div className="relative">
-            {/* Vertical line — draws down as items reveal */}
-            <div
-              className="absolute left-[15px] md:left-[19px] top-2 bottom-2 w-px bg-border/30 origin-top transition-transform duration-1000 ease-out"
-              style={{
-                transform:
-                  activeIndex >= 0 ? "scaleY(1)" : "scaleY(0)",
-              }}
-            />
+            
 
             {timelineItems.map((item, index) => {
               const isActive = index <= activeIndex;
@@ -159,7 +148,7 @@ export default function SystemNote() {
                   >
                     <div className="flex items-center gap-2.5 mb-3">
                       <i className={`${item.icon} text-accent text-xs`} />
-                      <p className="font-serif text-lg md:text-xl lg:text-2xl font-bold text-heading">
+                      <p className="text-lg md:text-xl lg:text-2xl font-bold text-heading newspirit">
                         {item.label}
                       </p>
                     </div>

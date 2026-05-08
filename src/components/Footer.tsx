@@ -10,9 +10,9 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <button
               onClick={() => scrollTo("hero")}
-              className="font-serif text-xl font-semibold text-text tracking-tight cursor-pointer"
+              className="font-serif text-xl font-semibold text-text tracking-tight cursor-pointer newspirit"
             >
-              Founder&apos;s Pen
+              Founders Pen
             </button>
 
             <p className="text-sm text-text-secondary text-center">

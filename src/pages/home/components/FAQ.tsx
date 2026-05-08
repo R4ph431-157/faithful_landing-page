@@ -45,16 +45,13 @@ const faqs = [
 
 function AccordionItem({
   item,
-  index,
   isOpen,
   onToggle,
 }: {
   item: (typeof faqs)[number];
-  index: number;
   isOpen: boolean;
   onToggle: () => void;
 }) {
-  const num = String(index + 1).padStart(2, "0");
 
   return (
     <div
@@ -81,13 +78,12 @@ function AccordionItem({
             isOpen ? "text-accent" : "text-text-muted group-hover:text-text-secondary"
           }`}
         >
-          {num}
         </span>
 
         {/* Question + arrow */}
         <span className="flex-1 flex items-start justify-between gap-4">
           <span
-            className={`font-mono text-xs md:text-sm lg:text-base uppercase tracking-[0.12em] leading-relaxed transition-colors duration-300 ${
+            className={`newspirit makebold text-xs md:text-sm lg:text-base tracking-[0.12em] leading-relaxed transition-colors duration-300 ${
               isOpen ? "text-text" : "text-text-secondary group-hover:text-text"
             }`}
           >
@@ -118,7 +114,7 @@ function AccordionItem({
       >
         <div className="px-5 md:px-7 pb-5 md:pb-6 pl-12 md:pl-16">
           <div className="border-t border-border/40 pt-4 md:pt-5">
-            <p className="font-serif italic text-sm md:text-base lg:text-lg text-text-secondary leading-relaxed max-w-2xl">
+            <p className=" text-sm md:text-base lg:text-lg text-text-secondary leading-relaxed max-w-2xl">
               {item.answer}
             </p>
           </div>
@@ -141,8 +137,8 @@ export default function FAQ() {
       <div className="w-full px-6 md:px-10 lg:px-20 xl:px-24">
         <div className="max-w-4xl mx-auto">
           <div className="animate-in opacity-0 translate-y-8 transition-all duration-700 ease-out mb-12 md:mb-16">
-            <p className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-heading mb-4">
-              Frequently Asked Questions
+            <p className="newspirit text-3xl md:text-4xl lg:text-5xl font-bold text-heading mb-4">
+              FAQs
             </p>
             <div className="w-12 h-px bg-accent/40" />
           </div>
@@ -156,7 +152,6 @@ export default function FAQ() {
               >
                 <AccordionItem
                   item={faq}
-                  index={i}
                   isOpen={openIndex === i}
                   onToggle={() =>
                     setOpenIndex(openIndex === i ? null : i)

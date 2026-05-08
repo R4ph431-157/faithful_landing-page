@@ -14,8 +14,8 @@ export default function Contact() {
 
       <div className="relative z-10 w-full px-6 md:px-10 lg:px-20 xl:px-24">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="animate-in opacity-0 translate-y-8 transition-all duration-700 ease-out font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-heading mb-6">
-            I appreciate your interest in Founder's Pen.
+          <p className="animate-in opacity-0 translate-y-8 transition-all duration-700 ease-out font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-heading mb-6 newspirit">
+            I appreciate your interest in Founders Pen.
           </p>
           
           <p className="animate-in opacity-0 translate-y-8 transition-all duration-700 ease-out delay-200 mt-5 text-lg md:text-xl lg:text-2xl text-text-secondary">
@@ -30,10 +30,10 @@ export default function Contact() {
               className="inline-flex items-center gap-2 bg-text text-bg px-10 py-4 rounded-full text-base font-medium hover:bg-accent hover:text-bg transition-all duration-300 cursor-pointer whitespace-nowrap tracking-wide"
             >
               <i className="ri-calendar-event-line" />
-              apply / book a call
+              Apply / Book A call
             </a>
             <p className="mt-5 text-sm text-text-muted">
-              takes less than 2 minutes
+              Takes less than 2 minutes
             </p>
           </div>
         </div>

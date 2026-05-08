@@ -2,7 +2,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useTypewriter } from "@/hooks/useTypewriter";
 
 const typewriterSegments = [
-  "ghostwriting for builders and creators who want to stay ",
+  "Ghostwriting for builders and creators who want to stay ",
   "consistent",
   " and ",
   "visible",
@@ -33,7 +33,7 @@ export default function Hero() {
 
       <div className="relative z-10 w-full px-6 md:px-10 lg:px-20 xl:px-24 pt-28 pb-20 md:pb-28">
         <div className="max-w-4xl">
-          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] xl:text-[6rem] font-semibold text-text leading-[1.08] tracking-tight">
+          <h1 className="newspirit text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] xl:text-[6rem] font-semibold text-text leading-[1.08] tracking-tight">
             {segmentStates.map((seg, i) => {
               if (!seg.visible) return null;
               return (
@@ -51,7 +51,7 @@ export default function Hero() {
           </h1>
 
           <p className="animate-in opacity-0 translate-y-8 transition-all duration-700 ease-out delay-400 mt-8 md:mt-10 text-xl md:text-2xl lg:text-[1.85rem] text-text max-w-xl leading-[1.5] font-serif italic tracking-wide border-l-2 border-accent pl-6 md:pl-8">
-            i ghostwrite your twitter and linkedin content every month so you
+            I ghostwrite your twitter and linkedin content every month so you
             stay consistent without thinking about what to post.
           </p>
 
@@ -60,19 +60,19 @@ export default function Hero() {
               <span className="flex-shrink-0 w-6 h-6 rounded-lg bg-surface-light border border-border flex items-center justify-center">
                 <i className="ri-stack-line text-accent" />
               </span>
-              <span>monthly content systems</span>
+              <span>Monthly content systems</span>
             </div>
             <div className="flex items-center gap-4">
               <span className="flex-shrink-0 w-6 h-6 rounded-lg bg-surface-light border border-border flex items-center justify-center">
                 <i className="ri-inbox-archive-line text-accent" />
               </span>
-              <span>delivered in batches</span>
+              <span>Delivered in batches</span>
             </div>
             <div className="flex items-center gap-4">
               <span className="flex-shrink-0 w-6 h-6 rounded-lg bg-surface-light border border-border flex items-center justify-center">
                 <i className="ri-shield-check-line text-accent" />
               </span>
-              <span>built for consistency, not chaos</span>
+              <span>Built for consistency, not chaos</span>
             </div>
           </div>
 
@@ -84,7 +84,7 @@ export default function Hero() {
               className="bg-text text-bg px-9 py-3.5 rounded-full text-[0.95rem] lg:text-base font-medium hover:bg-accent hover:text-bg transition-all duration-300 cursor-pointer whitespace-nowrap tracking-wide flex items-center gap-2"
             >
               <i className="ri-calendar-event-line" />
-              apply / book a call
+              Apply / Book a Call
             </a>
           </div>
         </div>

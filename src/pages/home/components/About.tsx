@@ -31,25 +31,25 @@ export default function About() {
 
           {/* Story Text */}
           <div className="flex-1 lg:pt-8">
-            <h2 className="animate-in opacity-0 translate-y-8 transition-all duration-700 ease-out delay-200 font-serif text-3xl md:text-4xl lg:text-[3.25rem] font-semibold text-text leading-tight">
-              i didn&apos;t plan to become a ghostwriter.
+            <h2 className="animate-in opacity-0 translate-y-8 transition-all duration-700 ease-out delay-200 IBM Plex Mono text-3xl md:text-4xl lg:text-[3.25rem] font-semibold text-text leading-tight newspirit">
+              I didn&apos;t plan to become a ghostwriter.
             </h2>
 
             <div className="animate-in opacity-0 translate-y-8 transition-all duration-700 ease-out delay-300 mt-8 md:mt-10 space-y-6 max-w-lg">
-              <p className="text-xs md:text-sm lg:text-base font-sans font-semibold tracking-[0.2em] text-text-muted leading-[2.2]">
-                i started out writing for fairblock, a web3 project, where i
+              <p className="text-xs md:text-sm lg:text-base  font-semibold tracking-[0.2em] text-text-muted leading-[2.2]">
+                I started out writing for Fairblock, a Web3 project, where I
                 helped turn complex topics into clear, simple content.
               </p>
               <p className="text-xs md:text-sm lg:text-base font-sans font-semibold tracking-[0.2em] text-text-muted leading-[2.2]">
-                after that, i worked with a ghostwriting agency, writing across
+                After that, I worked with a ghostwriting agency, writing across
                 different voices and styles.
               </p>
               <p className="text-xs md:text-sm lg:text-base font-sans font-semibold tracking-[0.2em] text-text-muted leading-[2.2]">
-                and it became clear that builders and creators don&apos;t
+                And it became clear that builders and creators don&apos;t
                 struggle with ideas, but with <span className="text-accent">consistency</span>.
               </p>
               <p className="font-serif italic text-lg md:text-xl lg:text-[1.55rem] text-text leading-[1.6] border-l border-accent pl-5 md:pl-6">
-                so i built founder&apos;s pen to help them stay consistent online
+                So I built Founders Pen to help them stay consistent online
                 with simple ghostwritten content systems that make posting feel
                 effortless instead of forced.
               </p>
@@ -61,8 +61,8 @@ export default function About() {
                 <i className="ri-quill-pen-line text-accent text-xs" />
               </span>
               <div>
-                <p className="font-serif text-xl md:text-2xl italic text-text">
-                  faithful
+                <p className="text-xl md:text-2xl italic text-text">
+                  Faithful
                 </p>
               </div>
             </div>

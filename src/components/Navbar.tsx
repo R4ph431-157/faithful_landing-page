@@ -31,9 +31,9 @@ export default function Navbar() {
       <div className="w-full px-6 md:px-10 lg:px-16 xl:px-20 py-3.5 flex items-center justify-between">
         <button
           onClick={() => handleNav("hero")}
-          className="font-serif text-xl md:text-2xl font-semibold text-text tracking-tight cursor-pointer"
+          className="font-serif text-xl md:text-2xl font-semibold text-text tracking-tight cursor-pointer newspirit"
         >
-          Founder&apos;s Pen
+          Founders Pen
         </button>
 
         {/* Desktop */}
@@ -42,13 +42,13 @@ export default function Navbar() {
             onClick={() => handleNav("about")}
             className="text-sm font-medium text-text-secondary hover:text-text transition-colors cursor-pointer whitespace-nowrap tracking-wide"
           >
-            about
+            About
           </button>
           <button
             onClick={() => handleNav("pricing")}
             className="text-sm font-medium text-text-secondary hover:text-text transition-colors cursor-pointer whitespace-nowrap tracking-wide"
           >
-            pricing
+            Pricing
           </button>
           <button
             onClick={() => handleNav("faq")}
@@ -60,7 +60,7 @@ export default function Navbar() {
             onClick={() => handleNav("contact")}
             className="text-sm font-medium bg-text text-bg px-6 py-2.5 rounded-full hover:bg-accent hover:text-bg transition-all duration-300 cursor-pointer whitespace-nowrap tracking-wide"
           >
-            book a call
+            Book A Call
           </button>
         </div>
 
@@ -76,10 +76,10 @@ export default function Navbar() {
       {/* Mobile menu */}
       {mobileOpen && (
         <div className="md:hidden bg-surface border-t border-border px-6 py-6 space-y-4">
-          <button onClick={() => handleNav("about")} className="block text-sm font-medium text-text-secondary hover:text-text transition-colors cursor-pointer">about</button>
-          <button onClick={() => handleNav("pricing")} className="block text-sm font-medium text-text-secondary hover:text-text transition-colors cursor-pointer">pricing</button>
+          <button onClick={() => handleNav("about")} className="block text-sm font-medium text-text-secondary hover:text-text transition-colors cursor-pointer">About</button>
+          <button onClick={() => handleNav("pricing")} className="block text-sm font-medium text-text-secondary hover:text-text transition-colors cursor-pointer">Pricing</button>
           <button onClick={() => handleNav("faq")} className="block text-sm font-medium text-text-secondary hover:text-text transition-colors cursor-pointer">FAQ</button>
-          <button onClick={() => handleNav("contact")} className="block text-sm font-medium bg-text text-bg px-6 py-2.5 rounded-full cursor-pointer text-center">book a call</button>
+          <button onClick={() => handleNav("contact")} className="block text-sm font-medium bg-text text-bg px-6 py-2.5 rounded-full cursor-pointer text-center">Book A Call</button>
         </div>
       )}
     </nav>

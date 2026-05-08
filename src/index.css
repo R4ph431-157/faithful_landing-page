@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@font-face {
+  font-family: 'NewSpirit';
+  src: url('/fonts/fonnts.com-New-Spirit-.otf') format('opentype');
+}
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -12,6 +19,16 @@ body {
   color: #F5F2ED;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.newspirit {
+  font-family: 'NewSpirit';
+  line-height: 1.1;
+}
+
+.makebold {
+  font-weight: 700;
+  font-size: 0.8rem;
 }
 
 @keyframes blink {
