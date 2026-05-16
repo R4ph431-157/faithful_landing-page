@@ -15,8 +15,8 @@ html {
 
 body {
   font-family: "IBM Plex Mono", monospace;
-  background-color: #0A0A0A;
-  color: #F5F2ED;
+  background-color: #FFFFFF;
+  color: #0A0A0A;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -31,11 +31,47 @@ body {
   font-size: 0.8rem;
 }
 
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+@keyframes drawUnderline {
+  from {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
 }
 
-.typewriter-cursor {
-  animation: blink 1s step-end infinite;
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.45), 0 0 18px rgba(255, 255, 255, 0.15);
+    opacity: 1;
+  }
+  50% {
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.75), 0 0 32px rgba(255, 255, 255, 0.3);
+    opacity: 0.8;
+  }
+}
+
+.tagline-underline {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.5) 18%,
+    #ffffff 50%,
+    rgba(255, 255, 255, 0.5) 82%,
+    transparent 100%
+  );
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.45), 0 0 18px rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  transform-origin: left center;
+  transform: scaleX(0);
+  opacity: 0;
+  animation:
+    drawUnderline 1s cubic-bezier(0.22, 1, 0.36, 1) 1.2s forwards,
+    glowPulse 2.8s ease-in-out 2.4s infinite;
+  margin-top: 10px;
 }

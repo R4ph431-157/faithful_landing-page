@@ -7,34 +7,23 @@ export default function Contact() {
     <section
       id="contact"
       ref={sectionRef}
-      className="relative py-20 md:py-28 lg:py-32 bg-surface overflow-hidden"
+      className="relative py-24 md:py-32 lg:py-40 bg-white overflow-hidden"
     >
-      {/* Decorative glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] rounded-full bg-accent/5 blur-[120px]" />
-
       <div className="relative z-10 w-full px-6 md:px-10 lg:px-20 xl:px-24">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="animate-in opacity-0 translate-y-8 transition-all duration-700 ease-out font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-heading mb-6 newspirit">
-            I appreciate your interest in Founders Pen.
-          </p>
-          
-          <p className="animate-in opacity-0 translate-y-8 transition-all duration-700 ease-out delay-200 mt-5 text-lg md:text-xl lg:text-2xl text-text-secondary">
-            Fill out this form, and I'll get back to you as soon as possible.
-          </p>
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="animate-in opacity-0 translate-y-8 transition-all duration-700 ease-out newspirit text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight">
+            Ready to stay consistent?
+          </h2>
 
-          <div className="animate-in opacity-0 translate-y-8 transition-all duration-700 ease-out delay-300 mt-12 md:mt-14 text-center">
+          <div className="animate-in opacity-0 translate-y-8 transition-all duration-700 ease-out delay-300 mt-10 md:mt-12">
             <a
               href="https://tally.so/r/68rbvA"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-text text-bg px-10 py-4 rounded-full text-base font-medium hover:bg-accent hover:text-bg transition-all duration-300 cursor-pointer whitespace-nowrap tracking-wide"
+              className="inline-flex items-center bg-navy text-text px-10 py-4 rounded-full text-base font-semibold hover:bg-transparent hover:text-navy hover:ring-2 hover:ring-navy hover:-translate-y-1 hover:shadow-lg transition-all duration-300 cursor-pointer whitespace-nowrap tracking-wide"
             >
-              <i className="ri-calendar-event-line" />
-              Apply / Book A call
+              Book a Call
             </a>
-            <p className="mt-5 text-sm text-text-muted">
-              Takes less than 2 minutes
-            </p>
           </div>
         </div>
       </div>

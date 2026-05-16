@@ -1,21 +1,20 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
+const CARD_BG = "#091027";
+
 const baseFeatures = [
-  { text: "15 twitter posts", icon: "ri-twitter-x-line" },
-  { text: "1 thread", icon: "ri-chat-thread-line" },
-  { text: "Monthly content themes", icon: "ri-lightbulb-line" },
-  { text: "2 revision rounds", icon: "ri-edit-circle-line" },
-  { text: "Delivered in a monthly batch (within 5 business days)", icon: "ri-time-line" },
+  "15 Twitter posts",
+  "1 thread",
+  "Monthly content themes",
+  "2 revision rounds",
 ];
 
 const premiumFeatures = [
-  { text: "20 twitter posts", icon: "ri-twitter-x-line" },
-  { text: "3 threads", icon: "ri-chat-thread-line" },
-  { text: "10 linkedin posts (repurposed from twitter ideas)", icon: "ri-linkedin-fill" },
-  { text: "Monthly content themes", icon: "ri-lightbulb-line" },
-  { text: "2 revision rounds", icon: "ri-edit-circle-line" },
-  { text: "Delivered in a monthly batch (within 5 business days)", icon: "ri-time-line" },
-  { text: "Scheduling after approval (optional)", icon: "ri-calendar-schedule-line" },
+  "20 Twitter posts",
+  "2 threads",
+  "6 LinkedIn posts (repurposed)",
+  "2 revision rounds",
+  "Scheduling after approval (Twitter only, optional)",
 ];
 
 export default function Pricing() {
@@ -25,38 +24,40 @@ export default function Pricing() {
     <section
       id="pricing"
       ref={sectionRef}
-      className="relative py-20 md:py-28 lg:py-32 bg-bg"
+      className="relative py-20 md:py-28 lg:py-32 bg-white"
     >
       <div className="w-full px-6 md:px-10 lg:px-20 xl:px-24">
-        {/* Section label */}
-        <div className="text-center mb-16 md:mb-20">
-          <p className="animate-in opacity-0 translate-y-8 transition-all duration-700 ease-out font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-heading newspirit">
+        {/* Section heading */}
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="animate-in opacity-0 translate-y-8 transition-all duration-700 ease-out newspirit text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
             Pricing
-          </p>
+          </h2>
         </div>
 
-        {/* Pricing Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-6 max-w-4xl mx-auto">
-          {/* Base Plan */}
-          <div className="animate-in opacity-0 translate-y-8 transition-all duration-700 ease-out delay-100 bg-surface border border-border rounded-2xl p-7 md:p-9 hover:border-border-light hover:-translate-y-1 hover:duration-300">
-            <p className="text-xs uppercase tracking-[2px] text-accent font-semibold">
-              Base
-            </p>
-            <div className="mt-5 flex items-baseline gap-1">
-              <span className=" text-4xl md:text-5xl xl:text-6xl font-semibold text-text">
-                $1,500
-              </span>
-              <span className="text-text-muted text-base lg:text-lg">/month</span>
-            </div>
-            <p className="mt-3 text-text-secondary text-base lg:text-lg">
-              Twitter Ghostwriting System for Consistent Presence
+        {/* Cards — 2 columns from md so they're proportionate on tablets */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6 max-w-3xl md:max-w-4xl mx-auto">
+
+          {/* Base */}
+          <div
+            className="animate-in opacity-0 translate-y-8 transition-all duration-700 ease-out delay-100 rounded-2xl p-6 lg:p-8 xl:p-10 flex flex-col items-center text-center"
+            style={{ backgroundColor: CARD_BG }}
+          >
+            <span
+              className="inline-block text-[0.6rem] uppercase tracking-[0.25em] font-bold px-5 py-1.5 rounded-full mb-6"
+              style={{ backgroundColor: "rgba(255,255,255,0.08)", color: "#FFFFFF" }}
+            >
+              BASE
+            </span>
+
+            <p className="text-3xl lg:text-4xl xl:text-5xl font-semibold mb-1" style={{ color: "#FFFFFF" }}>
+              $1,500
+              <span className="text-sm lg:text-base font-normal" style={{ color: "rgba(255,255,255,0.45)" }}>/month</span>
             </p>
 
-            <ul className="mt-8 space-y-4">
-              {baseFeatures.map((feature, i) => (
-                <li key={i} className="flex items-start gap-3 text-sm md:text-base lg:text-lg text-text-secondary">
-                  <i className={`${feature.icon} text-accent text-xs mt-1.5 flex-shrink-0`} />
-                  <span>{feature.text}</span>
+            <ul className="mt-7 mb-8 space-y-3 w-full">
+              {baseFeatures.map((f, i) => (
+                <li key={i} className="text-xs md:text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.6)" }}>
+                  {f}
                 </li>
               ))}
             </ul>
@@ -65,36 +66,48 @@ export default function Pricing() {
               href="https://tally.so/r/68rbvA"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-10 w-full bg-surface-light border border-border text-text py-3.5 rounded-full text-base font-medium hover:bg-text hover:text-bg hover:border-text transition-all duration-300 cursor-pointer whitespace-nowrap flex items-center justify-center gap-2"
+              className="mt-auto w-full py-3 rounded-full text-sm font-medium transition-all duration-300 cursor-pointer flex items-center justify-center"
+              style={{
+                backgroundColor: "#FFFFFF",
+                color: "#0D1B3E",
+              }}
+              onMouseEnter={(e) => {
+                (e.currentTarget as HTMLElement).style.backgroundColor = "rgba(255,255,255,0.08)";
+                (e.currentTarget as HTMLElement).style.color = "#FFFFFF";
+              }}
+              onMouseLeave={(e) => {
+                (e.currentTarget as HTMLElement).style.backgroundColor = "#FFFFFF";
+                (e.currentTarget as HTMLElement).style.color = "#0D1B3E";
+              }}
             >
-              <i className="ri-rocket-line" />
               Get Started
             </a>
           </div>
 
-          {/* Premium Plan */}
-          <div className="animate-in opacity-0 translate-y-8 transition-all duration-700 ease-out delay-200 relative bg-surface border border-accent/30 rounded-2xl p-7 md:p-9 hover:border-accent/50 hover:-translate-y-1 hover:duration-300">
-            {/* Recommended indicator */}
+          {/* Premium */}
+          <div
+            className="animate-in opacity-0 translate-y-8 transition-all duration-700 ease-out delay-200 relative rounded-2xl p-6 lg:p-8 xl:p-10 flex flex-col items-center text-center"
+            style={{ backgroundColor: CARD_BG }}
+          >
+            {/* Accent top bar */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 h-[2px] w-24 bg-accent rounded-b-full" />
 
-            <p className="text-xs uppercase tracking-[2px] text-accent font-semibold mt-2">
-              Premium
-            </p>
-            <div className="mt-5 flex items-baseline gap-1">
-              <span className="text-4xl md:text-5xl xl:text-6xl font-semibold text-text">
-                $3,000
-              </span>
-              <span className="text-text-muted text-base lg:text-lg">/month</span>
-            </div>
-            <p className="mt-3 text-text-secondary text-base lg:text-lg">
-              Twitter + LinkedIn Ghostwriting System
+            <span
+              className="inline-block text-[0.6rem] uppercase tracking-[0.25em] font-bold px-5 py-1.5 rounded-full mb-6 mt-2"
+              style={{ backgroundColor: "rgba(255,255,255,0.08)", color: "#FFFFFF" }}
+            >
+              PREMIUM
+            </span>
+
+            <p className="text-3xl lg:text-4xl xl:text-5xl font-semibold mb-1" style={{ color: "#FFFFFF" }}>
+              $3,000
+              <span className="text-sm lg:text-base font-normal" style={{ color: "rgba(255,255,255,0.45)" }}>/month</span>
             </p>
 
-            <ul className="mt-8 space-y-4">
-              {premiumFeatures.map((feature, i) => (
-                <li key={i} className="flex items-start gap-3 text-sm md:text-base lg:text-lg text-text-secondary">
-                  <i className={`${feature.icon} text-accent text-xs mt-1.5 flex-shrink-0`} />
-                  <span>{feature.text}</span>
+            <ul className="mt-7 mb-8 space-y-3 w-full">
+              {premiumFeatures.map((f, i) => (
+                <li key={i} className="text-xs md:text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.6)" }}>
+                  {f}
                 </li>
               ))}
             </ul>
@@ -103,17 +116,27 @@ export default function Pricing() {
               href="https://tally.so/r/68rbvA"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-10 w-full bg-accent text-bg py-3.5 rounded-full text-base font-medium hover:bg-text hover:text-bg transition-all duration-300 cursor-pointer whitespace-nowrap flex items-center justify-center gap-2"
+              className="mt-auto w-full py-3 rounded-full text-sm font-medium transition-all duration-300 cursor-pointer flex items-center justify-center"
+              style={{
+                backgroundColor: "#FFFFFF",
+                color: "#0D1B3E",
+              }}
+              onMouseEnter={(e) => {
+                (e.currentTarget as HTMLElement).style.backgroundColor = "rgba(255,255,255,0.08)";
+                (e.currentTarget as HTMLElement).style.color = "#FFFFFF";
+              }}
+              onMouseLeave={(e) => {
+                (e.currentTarget as HTMLElement).style.backgroundColor = "#FFFFFF";
+                (e.currentTarget as HTMLElement).style.color = "#0D1B3E";
+              }}
             >
-              <i className="ri-rocket-line" />
               Get Started
             </a>
           </div>
         </div>
 
-        {/* Engagement Note */}
-        <p className="animate-in opacity-0 translate-y-8 transition-all duration-700 ease-out delay-300 mt-10 text-center text-sm text-text-muted italic">
-          Note: Engagement (replies, Dms, community management) is not included.
+        <p className="animate-in opacity-0 translate-y-8 transition-all duration-700 ease-out delay-300 mt-10 text-center text-sm text-gray-400 italic">
+          Note: Engagement (replies, DMs, community management) is not included.
         </p>
       </div>
     </section>

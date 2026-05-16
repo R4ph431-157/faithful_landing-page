@@ -13,9 +13,9 @@ const faqs = [
       "You fill the onboarding form once, and I handle everything from there. Each month is delivered in a structured batch.",
   },
   {
-    question: "What if I don't like the content?",
+    question: "How do revisions work?",
     answer:
-      "You get up to 2 revision rounds per monthly delivery until it aligns with your voice.",
+      "You get up to 2 revision rounds per monthly delivery. Revisions are included to ensure the content aligns with your voice. Feedback should be shared within 48–72 hours after delivery. Additional revisions outside scope may be charged or moved to the next cycle.",
   },
   {
     question: "What platforms do you write for?",
@@ -47,79 +47,47 @@ function AccordionItem({
   item,
   isOpen,
   onToggle,
+  isLast,
 }: {
   item: (typeof faqs)[number];
   isOpen: boolean;
   onToggle: () => void;
+  isLast: boolean;
 }) {
-
   return (
-    <div
-      className={`group relative rounded-xl border transition-all duration-500 overflow-hidden ${
-        isOpen
-          ? "border-accent/30 bg-surface"
-          : "border-border bg-surface/50 hover:border-border-light hover:bg-surface"
-      }`}
-    >
-      {/* Active left accent line */}
-      <div
-        className={`absolute left-0 top-0 bottom-0 w-[2px] bg-accent transition-all duration-500 ${
-          isOpen ? "opacity-100" : "opacity-0 group-hover:opacity-30"
-        }`}
-      />
-
+    <div>
+      <div className="border-t border-gray-200" />
       <button
         onClick={onToggle}
-        className="w-full flex items-start gap-5 md:gap-6 px-5 md:px-7 py-5 md:py-6 text-left cursor-pointer"
+        className="w-full flex items-start justify-between gap-6 py-5 md:py-6 text-left cursor-pointer group"
       >
-        {/* Number */}
         <span
-          className={`flex-shrink-0 font-mono text-xs md:text-sm transition-colors duration-300 ${
-            isOpen ? "text-accent" : "text-text-muted group-hover:text-text-secondary"
+          className={`newspirit makebold text-sm md:text-base lg:text-[1rem] tracking-[0.06em] leading-snug transition-colors duration-300 ${
+            isOpen ? "text-gray-900" : "text-gray-700 group-hover:text-gray-900"
           }`}
         >
+          {item.question}
         </span>
-
-        {/* Question + arrow */}
-        <span className="flex-1 flex items-start justify-between gap-4">
-          <span
-            className={`newspirit makebold text-xs md:text-sm lg:text-base tracking-[0.12em] leading-relaxed transition-colors duration-300 ${
-              isOpen ? "text-text" : "text-text-secondary group-hover:text-text"
+        <span className="flex-shrink-0 mt-0.5 text-gray-400">
+          <i
+            className={`ri-arrow-up-s-line text-xl transition-transform duration-300 ${
+              isOpen ? "rotate-0" : "rotate-180"
             }`}
-          >
-            {item.question}
-          </span>
-
-          <span
-            className={`flex-shrink-0 w-7 h-7 rounded-full border flex items-center justify-center transition-all duration-500 mt-0.5 ${
-              isOpen
-                ? "bg-accent/10 border-accent/40 rotate-45"
-                : "bg-surface-light border-border group-hover:border-border-light"
-            }`}
-          >
-            <i
-              className={`ri-add-line text-sm transition-colors duration-300 ${
-                isOpen ? "text-accent" : "text-text-muted"
-              }`}
-            />
-          </span>
+          />
         </span>
       </button>
 
-      {/* Answer panel */}
       <div
-        className={`transition-all duration-500 ease-out ${
-          isOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
+        className={`overflow-hidden transition-all duration-500 ease-out ${
+          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="px-5 md:px-7 pb-5 md:pb-6 pl-12 md:pl-16">
-          <div className="border-t border-border/40 pt-4 md:pt-5">
-            <p className=" text-sm md:text-base lg:text-lg text-text-secondary leading-relaxed max-w-2xl">
-              {item.answer}
-            </p>
-          </div>
-        </div>
+        <p className="IBM Plex Mono text-xs md:text-sm lg:text-[0.88rem] text-gray-500 leading-[2] pb-5 md:pb-6 max-w-2xl">
+          {item.answer}
+        </p>
       </div>
+
+      {isLast && <div className="border-t border-gray-200" />}
     </div>
   );
 }
@@ -132,30 +100,28 @@ export default function FAQ() {
     <section
       id="faq"
       ref={sectionRef}
-      className="relative py-20 md:py-28 lg:py-32 bg-bg"
+      className="relative py-20 md:py-28 lg:py-32 bg-white"
     >
       <div className="w-full px-6 md:px-10 lg:px-20 xl:px-24">
-        <div className="max-w-4xl mx-auto">
-          <div className="animate-in opacity-0 translate-y-8 transition-all duration-700 ease-out mb-12 md:mb-16">
-            <p className="newspirit text-3xl md:text-4xl lg:text-5xl font-bold text-heading mb-4">
+        <div className="max-w-3xl mx-auto">
+          <div className="animate-in opacity-0 translate-y-8 transition-all duration-700 ease-out mb-12 md:mb-16 text-center">
+            <h2 className="newspirit text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
               FAQs
-            </p>
-            <div className="w-12 h-px bg-accent/40" />
+            </h2>
           </div>
 
-          <div className="space-y-3 md:space-y-4">
+          <div>
             {faqs.map((faq, i) => (
               <div
                 key={i}
                 className="animate-in opacity-0 translate-y-8 transition-all duration-700 ease-out"
-                style={{ transitionDelay: `${i * 60}ms` }}
+                style={{ transitionDelay: `${i * 50}ms` }}
               >
                 <AccordionItem
                   item={faq}
                   isOpen={openIndex === i}
-                  onToggle={() =>
-                    setOpenIndex(openIndex === i ? null : i)
-                  }
+                  onToggle={() => setOpenIndex(openIndex === i ? null : i)}
+                  isLast={i === faqs.length - 1}
                 />
               </div>
             ))}

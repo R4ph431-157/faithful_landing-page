@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:canva.link)",
+      "Bash(Remove-Item \"c:\\\\Users\\\\HP\\\\Documents\\\\faithful_landing-page\\\\src\\\\hooks\\\\useTypewriter.ts\")",
+      "PowerShell(Remove-Item \"c:\\\\Users\\\\HP\\\\Documents\\\\faithful_landing-page\\\\src\\\\hooks\\\\useTypewriter.ts\" -Confirm:$false)"
+    ]
+  }
+}
